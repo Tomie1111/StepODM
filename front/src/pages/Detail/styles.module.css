@@ -1,0 +1,418 @@
+.containerWrap {
+  display: flex;
+  padding-left: 20px;
+  min-height: calc(100vh - 80px); 
+  background-color: #FAF9F7;
+}
+
+/* Mobile adjustments for container wrap */
+@media (max-width: 768px) {
+  .containerWrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.fullWidth .main {
+  width: 100%;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+.main {
+  flex: 1;
+  padding: 40px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Mobile adjustments for main */
+@media (max-width: 768px) {
+  .main {
+    padding: 20px 10px;
+  }
+}
+
+.container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Sarabun', 'Inter', sans-serif;
+}
+
+/* Mobile adjustments for container */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.back {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.grid {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Mobile adjustments for grid */
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.imageBox {
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+}
+
+/* Mobile adjustments for image box */
+@media (max-width: 768px) {
+  .imageBox {
+    width: 100%;
+  }
+}
+
+.mainImage {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.modelCanvasWrapper {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile adjustments for model canvas */
+@media (max-width: 768px) {
+  .modelCanvasWrapper {
+    height: 300px;
+  }
+}
+
+.modelCanvasWrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.arrowButton {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 50%;
+  font-size: 26px;
+  color: #353333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.arrowButton:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.arrowLeft {
+  left: -25px;
+}
+
+.arrowRight {
+  right: -25px;
+}
+
+/* Mobile adjustments for arrow buttons */
+@media (max-width: 768px) {
+  .arrowButton {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .arrowLeft {
+    left: 5px;
+  }
+  
+  .arrowRight {
+    right: 5px;
+  }
+}
+
+.thumbnailList {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Mobile adjustments for thumbnail list */
+@media (max-width: 768px) {
+  .thumbnailList {
+    justify-content: center;
+    gap: 6px;
+  }
+}
+
+/* Wrapper for each thumbnail (image or 3D) */
+.thumbnailWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile adjustments for thumbnail wrapper */
+@media (max-width: 768px) {
+  .thumbnailWrapper {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Highlight when active */
+.thumbnailWrapper.activeThumbnail {
+  border-color: #007bff;
+}
+
+/* Inner thumbnail content */
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+
+/* Ensure image fits well */
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.info {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Mobile adjustments for info section */
+@media (max-width: 768px) {
+  .info {
+    min-width: 100%;
+  }
+}
+
+.productName {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Mobile adjustments for product name */
+@media (max-width: 768px) {
+  .productName {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Mobile adjustments for price */
+@media (max-width: 768px) {
+  .price {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.category {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Mobile adjustments for category */
+@media (max-width: 768px) {
+  .category {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+.section {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d6dbe2; 
+  width: 100%;
+}
+
+/* Mobile adjustments for section */
+@media (max-width: 768px) {
+  .section {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+.downloadBtn {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e8e8e8;
+  color: rgb(0, 0, 0);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.downloadBtn:hover {
+  background-color: #bfbfbf;
+}
+
+/* Mobile adjustments for download button */
+@media (max-width: 768px) {
+  .downloadBtn {
+    padding: 12px 16px;
+    font-size: 14px;
+    flex: 1;
+    text-align: center;
+    min-width: 120px;
+  }
+}
+
+.addToCartBtn {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addToCartBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile adjustments for add to cart button */
+@media (max-width: 768px) {
+  .addToCartBtn {
+    padding: 12px 16px;
+    font-size: 14px;
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Mobile adjustments for action buttons */
+@media (max-width: 768px) {
+  .actionButtons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  
+  /* Stack buttons vertically on very small screens */
+  @media (max-width: 480px) {
+    .actionButtons {
+      flex-direction: column;
+    }
+  }
+}
+
+.loading {
+  padding: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Mobile adjustments for loading */
+@media (max-width: 768px) {
+  .loading {
+    padding: 50px 20px;
+    font-size: 18px;
+  }
+}
+
+/* Additional mobile-specific improvements */
+@media (max-width: 480px) {
+  .containerWrap {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .main {
+    padding: 15px 5px;
+  }
+  
+  .container {
+    padding: 15px 5px;
+  }
+  
+  .productName {
+    font-size: 20px;
+  }
+  
+  .price {
+    font-size: 16px;
+  }
+  
+  .thumbnailWrapper {
+    width: 45px;
+    height: 45px;
+  }
+}

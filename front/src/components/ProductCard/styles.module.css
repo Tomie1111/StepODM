@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  padding: 20px;
+  background: #FAF9F7;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  padding-left: 20px;
+  min-width: 0;
+  transition: margin-left 0.3s ease;
+}
+
+.fullWidth .main {
+  padding-left: 0;
+  margin-left: -250px;
+}
+
+.title {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.desc {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: -15px;
+  padding: 0 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  color: #1a73e8;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 10px 0 16px;
+}
+
+.detailLink {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.detailLink:hover {
+  color: #0c47b7;
+  text-decoration: underline;
+}
+
+.totalCount {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .main {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .fullWidth .main {
+    margin-left: 0;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    width: 240px;
+    max-width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .title {
+    font-family: 'Sarabun', 'Inter', sans-serif;
+    font-size: 1.75rem;
+  }
+}

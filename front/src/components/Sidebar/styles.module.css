@@ -1,0 +1,121 @@
+.sidebar {
+  position: sticky;
+  top: 70px;
+  width: 260px;
+  background: white;
+  padding: 1.5rem 1.25rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Sidebar Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.title {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #999;
+}
+
+/* Category Wrapper */
+.categoryGroup {
+  margin-bottom: 1.5rem;
+}
+
+.categoryTitle {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2d3748;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.categoryTitle svg {
+  width: 20px;
+  height: 20px;
+  color: #2d3748;
+}
+
+/* Menu Styles */
+.menu {
+  
+  list-style: none;
+  padding-left: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.menuItem {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #4a5568;
+  padding: 0.3rem 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.menuItem:hover {
+  color: #1a73e8;
+}
+
+.active {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+/* Mobile Animation */
+.slideIn {
+  transform: translateX(0);
+}
+
+.slideOut {
+  transform: translateX(-100%);
+}
+.divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.5rem 0;
+}
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 40;
+    height: calc(100vh - 70px);
+    border-radius: 0 12px 12px 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

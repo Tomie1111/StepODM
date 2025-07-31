@@ -1,0 +1,146 @@
+.footerContainer {
+  background-color: #101828;
+  color: #fff;
+  padding: 3rem 2rem 2rem;
+  font-family: 'Sarabun', 'Inter', sans-serif;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerSection {
+  
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footerTitle {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection li {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.footerSection li:hover {
+  color: #fff;
+}
+
+.footerSection a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.footerSection a:hover {
+  color: #fff;
+}
+
+.footerSection p {
+  margin: 0.5rem 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footerSocial {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footerSocial a {
+  font-size: 1.25rem;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.footerSocial a:hover {
+  color: #fff;
+}
+
+.certificationImg {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.footerHashtags {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.footerBottom {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  text-align: center;
+  border-top: 1px solid #2b3648;
+  padding-top: 1rem;
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+.lineContactBtn {
+  background-color: #00c300;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lineContactBtn a {
+  text-decoration: none;
+  color: white;
+}
+
+.lineContactBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.aboutLeft {
+  flex: 1 1 300px;
+}
+
+.aboutRight {
+  flex: 1 1 300px;
+}
+
+.footerLabel {
+  font-family: 'Sarabun', 'Inter', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1rem;
+}
