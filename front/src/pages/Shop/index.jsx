@@ -57,8 +57,9 @@ export default function Shop() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://172.16.2.61:5150/api/products');
+        const res = await fetch('https://backend-catalog.eds-center.com/api/products');
         const data = await res.json();
+        console.log('Fetched products:', data);
         setProducts(data);
       } catch (err) {
         console.error('Failed to fetch products:', err);

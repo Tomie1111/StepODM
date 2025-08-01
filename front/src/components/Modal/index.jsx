@@ -4,7 +4,7 @@ export default function Modal({ product, onClose, onAddToCart }) {
   if (!product) return null;
 
   const firstImage = Array.isArray(product.images) && product.images[0]
-    ? `http://172.16.2.61:5150/uploads/${product.images[0]}`
+    ? `https://backend-catalog.eds-center.com/uploads/${product.images[0]}`
     : '/placeholder.jpg';
 
   const specList =
@@ -15,7 +15,7 @@ export default function Modal({ product, onClose, onAddToCart }) {
       : [];
 
   const datasheetUrl = product.datasheet
-    ? `http://172.16.2.61:5150/uploads/${product.datasheet}`
+    ? `https://backend-catalog.eds-center.com/uploads/${product.datasheet}`
     : null;
 
   return (

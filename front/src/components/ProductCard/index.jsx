@@ -8,7 +8,7 @@ export default function ProductCard({ product, onClick }) {
       : 'ไม่มีราคา';
 
   const firstImage = product.images?.[0]
-    ? `http://172.16.2.61:5150/uploads/${product.images[0]}`
+    ? `https://backend-catalog.eds-center.com/uploads/${product.images[0]}`
     : '/placeholder.jpg';
 
   return (
@@ -22,7 +22,7 @@ export default function ProductCard({ product, onClick }) {
 
       <div
         className={styles.detailContainer}
-        onClick={(e) => e.stopPropagation()} // ❗ Stop click from triggering modal
+        onClick={(e) => e.stopPropagation()} 
       >
         <Link to={`/detail/${product._id}`} className={styles.detailLink}>
           รายละเอียด

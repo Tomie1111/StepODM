@@ -16,7 +16,7 @@ export default function Detail() {
   const toggleSidebar = () => setSidebarOpen((prev) => !prev);
 
   useEffect(() => {
-    fetch(`http://172.16.2.61:5150/api/products/${id}`)
+    fetch(`https://backend-catalog.eds-center.com/api/products/${id}`)
       .then(async (res) => {
         if (!res.ok) throw new Error("Failed to fetch");
         const contentType = res.headers.get("content-type");
@@ -37,14 +37,14 @@ export default function Detail() {
   const imageUrls = Array.isArray(product.images)
     ? product.images.map((img) => ({
         type: "image",
-        url: `http://172.16.2.61:5150/uploads/${img}`,
+        url: `https://backend-catalog.eds-center.com/uploads/${img}`,
       }))
     : [];
 
   const modelItem = product.model3d
     ? {
         type: "model3d",
-        url: `http://172.16.2.61:5150/uploads/${product.model3d}`,
+        url: `https://backend-catalog.eds-center.com/uploads/${product.model3d}`,
       }
     : null;
 
@@ -186,7 +186,7 @@ export default function Detail() {
                 {product.datasheet && (
                   <a
                     className={styles.downloadBtn}
-                    href={`http://172.16.2.61:5150/uploads/${product.datasheet}`}
+                    href={`https://backend-catalog.eds-center.com/uploads/${product.datasheet}`}
                     download
                     target="_blank"
                     rel="noopener noreferrer"

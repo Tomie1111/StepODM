@@ -13,7 +13,19 @@ app.use(express.json());
 
 // Serve static images
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(cors({
+    origin: ["https://catalog.eds-center.com"],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
 
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://catalog.eds-center.com");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    next();
+});
 // API Routes
 app.use('/api/products', productRoutes);
 
